@@ -12,3 +12,33 @@
 .license {
   font-size: 0.8em;
 }
+
+#no-comments {
+  text-align: center;
+  padding: 2rem 0;
+  color: #999;
+}
+
+#comment-form {
+  label {
+    display: block;
+  }
+  textarea {
+    font: inherit;
+    width: 70%;
+    color: inherit;
+  }
+  fieldset {
+    border: 0;
+  }
+  .js-notice {
+    font-size: 0.9em;
+    padding: 1em;
+  }
+  button {
+
+  }
+  .hidden {
+    display: none;
+  }
+}

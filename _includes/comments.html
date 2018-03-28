@@ -1,0 +1,40 @@
+<h2>Comments</h2>
+
+{%- if site.data.comments[page.slug] -%}
+  {% assign comments = site.data.comments[page.slug] | sort %}
+  {% for comment in comments %}
+    <div id="comment{{ forloop.index }}" class="comment">
+      <h3>{{ comment.name }}</h3>
+      {{ comment.message | markdownify }}
+    </div>
+  {% endfor %}
+{%- else -%}
+<p id="no-comments">No comments.</p>
+{%- endif -%}
+
+<h3>Add your comment</h3>
+<form
+    id="comment-form"
+    method="post"
+    action="https://api.staticman.net/v2/entry/{{ site.github_username }}/{{ site.repository }}/{{ site.staticman.branch }}/comments"
+    class="post__comments-form js-form">
+  <fieldset>
+    <label for="comment-form-name">Name</label>
+    <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+    <label for="comment-form-message">Comment</label>
+    <textarea type="text" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+  </fieldset>
+  <fieldset class="hidden" style="display:none;">
+    <!-- used by Staticman to generate filenames for each comment -->
+    <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+    <!-- honey pot field used to filter out spam -->
+    <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+    <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+  </fieldset>
+  <p class="hidden js-notice">
+    <span class="js-notice-text"></span>
+  </p>
+  <fieldset>
+    <button type="submit" id="comment-form-submit" tabindex="5">Submit Comment</button>
+  </fieldset>
+</form>
