@@ -13,32 +13,49 @@
   font-size: 0.8em;
 }
 
+.comment {
+  background-color: #fff;
+  padding: 1em;
+  margin: 2em 0;
+  box-sizing: border-box;
+  border-top: 1px solid #666;
+  h3 {
+    margin: 0;
+  }
+  .comment-date {
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+  }
+}
+
 #no-comments {
   text-align: center;
   padding: 2rem 0;
   color: #999;
 }
+#add-comment {
+  border-top: 1px solid #999;
+  #comment-form {
+    label {
+      display: block;
+    }
+    textarea {
+      font: inherit;
+      width: 70%;
+      color: inherit;
+    }
+    fieldset {
+      border: 0;
+    }
+    .js-notice {
+      font-size: 0.9em;
+      padding: 1em;
+    }
+    button {
 
-#comment-form {
-  label {
-    display: block;
-  }
-  textarea {
-    font: inherit;
-    width: 70%;
-    color: inherit;
-  }
-  fieldset {
-    border: 0;
-  }
-  .js-notice {
-    font-size: 0.9em;
-    padding: 1em;
-  }
-  button {
-
-  }
-  .hidden {
-    display: none;
+    }
+    .hidden {
+      display: none;
+    }
   }
 }
