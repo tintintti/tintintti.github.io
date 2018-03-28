@@ -12,6 +12,7 @@ $(document).ready(function () {
       success: function (data) {
         $('#comment-form-submit').html('Submitted');
         $('.post__comments-form .js-notice').removeClass('notice--danger').addClass('notice--success');
+        form.reset();
         showAlert('<strong>Thanks for your comment!</strong>');
       },
       error: function (err) {
