@@ -39,20 +39,34 @@
     label {
       display: block;
     }
-    textarea {
+    textarea, input {
       font: inherit;
       width: 70%;
       color: inherit;
+      border: 1px solid #999;
+      padding: 0.4em;
     }
     fieldset {
       border: 0;
     }
-    .js-notice {
+    button {
+      padding: 0.6em;
+      background-color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+      box-shadow: 1px 2px 2px 1px #999;
+      border: 0;
+    }
+    .message {
       font-size: 0.9em;
       padding: 1em;
-    }
-    button {
-
+      &.error {
+        color: #b70000;
+      }
+      &.success {
+        color: #3a7c00;
+      }
     }
     .hidden {
       display: none;
