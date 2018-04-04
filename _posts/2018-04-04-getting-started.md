@@ -1,6 +1,6 @@
 ---
 layout: post
-title: getting started
+title: getting started with jekyll
 ---
 Setting up a blog with Jekyll in GitHub Pages was pretty straightforward. GitHub Pages uses Jekyll, so deploying the site is basically just pushing it to GitHub.
 
