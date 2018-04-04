@@ -29,4 +29,4 @@ layout: post
 title:  title of yout post
 ---
 ```
-Then you can write your blog post using markdown! Pushing the new blog post (or any other changes) to GitHub will cause GitHub Pages to build and pubish on your site at *https://[username].github.io*.
+Then you can write your blog post using markdown! Pushing the new blog post (or any other changes) to GitHub will cause GitHub Pages to build and publish on your site at *https://[username].github.io*.
