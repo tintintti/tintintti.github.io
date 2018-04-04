@@ -11,13 +11,13 @@ $(document).ready(function () {
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
         $('#comment-form-submit').html('Submitted');
-        $('.post__comments-form .message').removeClass('error').addClass('success');
+        $('.comments-form .message').removeClass('error').addClass('success');
         form.reset();
         showAlert('<strong>Thanks for your comment!</strong> It may take a moment for it to appear.');
       },
       error: function (err) {
         $('#comment-form-submit').html('Submit Comment');
-        $('.post__comments-form .message').removeClass('success').addClass('error');
+        $('.comments-form .message').removeClass('success').addClass('error');
         showAlert('<strong>Adding comment failed.</strong> Please make sure all fields have been filled and try again.');
       }
     });
@@ -26,7 +26,7 @@ $(document).ready(function () {
   });
 
   function showAlert(message) {
-    $('.post__comments-form .message').removeClass('hidden');
-    $('.post__comments-form .message-text').html(message);
+    $('.comments-form .message').removeClass('hidden');
+    $('.comments-form .message-text').html(message);
   }
 });
